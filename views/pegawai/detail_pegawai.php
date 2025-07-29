@@ -1,19 +1,11 @@
-<?php
-include('connection.php');
-$id = $_GET['id'];
-$query = mysqli_query($connection, "SELECT * FROM pegawai WHERE id = '$id'");
-$pegawai = mysqli_fetch_assoc($query);
-
-// echo "<pre>";
-// print_r($pegawai);
-// echo "</pre>";
-?>
-
-<html>
-    <head>
-        <title>Profile Pegawai</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Data Pegawai</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
     <body>
         <div class="container">
             <h3><?= $pegawai['nama']?></h3>
@@ -46,3 +38,4 @@ $pegawai = mysqli_fetch_assoc($query);
         </div>
     </body>
 </html>
+

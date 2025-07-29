@@ -1,17 +1,15 @@
-<?php
-include('connection.php');
-
-$id = $_GET['id'];
-$query = mysqli_query($connection, "SELECT * FROM pegawai WHERE id = '$id'");
-$pegawai = mysqli_fetch_assoc($query);
-?>
-
-<html>
-      <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Data Pegawai</title>
+</head>
+    <body>
         <div class="container">
             <h1>Edit Data Pegawai</h1>
 
-            <form method="POST" action="update.php">
+            <form method="POST" action="index.php?page=proses-update-pegawai">
                 <input type="hidden" name="id" value="<?= $pegawai['id']; ?>">
 
                 <label>Nama</label><br>
@@ -54,3 +52,4 @@ $pegawai = mysqli_fetch_assoc($query);
         </div>
     </body>
 </html>
+

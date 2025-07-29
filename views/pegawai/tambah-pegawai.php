@@ -1,9 +1,16 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Data Pegawai</title>
+</head>
+<body>
     <body>
         <div class="container">
             <h1>Tambah Data Pegawai</h1>
 
-            <form method="POST" action="insert.php">
+           <form method="POST" action="index.php?page=proses-insert-pegawai">
                 <label>Nama</label><br>
                 <input type="text" name="nama" required>
                 <br><br>
@@ -34,7 +41,7 @@
                 <label>Status Perkawinan</label><br>
                 <select name="status_perkawinan" required>
                     <option value="Belum Menikah">Belum Menikah</option>
-                    <option value="Sudah Menikah">Sudah Menikah</option>
+                    <option value="Sudah">Sudah Menikah</option>
                 </select>
                 <br><br>
 
@@ -43,4 +50,5 @@
             <a href="index.php">kembali</a>
         </div>
     </body>
+</body>
 </html>

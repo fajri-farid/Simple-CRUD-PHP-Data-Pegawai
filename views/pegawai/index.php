@@ -1,30 +1,23 @@
-<?php
-include('connection.php');
+<!DOCTYPE html>
 
-$query = mysqli_query($connection, "SELECT * FROM pegawai");;
-$result = mysqli_fetch_all($query, MYSQLI_ASSOC);
-
-// echo "<pre>";
-// print_r($result);
-// echo "</pre>";
-?>
-
-<html>
-    <head>
-        <title>List Data Pegawai</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Pegawai</title>
+</head>
+<body>
         <div class="container">
-            <h1>List Data Pegawai</h1>
+            <h1>Data Pegawai</h1>
 
             <form method="GET" action="search.php">
                 <input type="text" name="search" placeholder="Cari pegawai...">
                 <button type="submit">Cari</button>
             </form>
-           
-            <a href="add.php">Tambah Data</a> 
-            <br><br>
+
+            <br><a href="index.php?page=tambah-pegawai">Tambah Data</a><br><br>
+
             <table border="1">
                 <thead>
                     <tr>
@@ -36,17 +29,20 @@ $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($result as $index => $pegawai): ?>
+                    <?php foreach ($pegawaiList as $index => $pegawai): ?>
                         <tr>
                             <td><?= $index + 1; ?></td>
-                            <td><a href="profile.php?id=<?= $pegawai['id']; ?>"><?= $pegawai['nama']; ?></a></td>
+                            <td>
+                                <a href="index.php?page=detail-pegawai&id=<?= htmlspecialchars($pegawai['id']) ?>">
+                                    <?= htmlspecialchars($pegawai['nama']) ?>
+                                </a>
+                            </td>
                             <td><?= $pegawai['jenis_kelamin']; ?></td>
                             <td><?= $pegawai['alamat']; ?></td>
                             <td>
-                                <a href="edit.php?id=<?=$pegawai['id']?>">Edit</a>
-                                |
-                                <a href="delete.php?id=<?=$pegawai['id']?>">Hapus</a>
-                        </td>
+                                <a href="index.php?page=edit-pegawai&id=<?= $pegawai['id'];?>">Edit</a> |
+                                <a href="index.php?page=proses-delete-pegawai&id=<?= $pegawai['id']; ?>">Hapus</a>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

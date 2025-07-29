@@ -1,0 +1,6 @@
+.env
+actions/*
+config/*
+sql/*
+views/*
+public/*

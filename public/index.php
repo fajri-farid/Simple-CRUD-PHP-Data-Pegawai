@@ -24,7 +24,7 @@ switch ($page) {
             $result = insertPegawai($data);
 
             if ($result) {
-                header("Location: index.php?page=home");
+                header("Location: home");
                 exit;
             } else {
                 echo "Gagal menyimpan data.";
@@ -59,7 +59,7 @@ switch ($page) {
             $result = updatePegawai($data);
 
             if ($result) {
-                header("Location: index.php?page=detail-pegawai&id=" . $data['id']);
+                header("Location: detail-pegawai&id=" . $data['id']);
                 exit;
             } else {
                 echo "Gagal memperbarui data.<br>";
@@ -79,7 +79,7 @@ switch ($page) {
         $id = $_GET['id'];
         $result = deletePegawai($id);
         if ($result) {
-            header("Location: index.php?page=home");
+            header("Location: page=home");
             exit;
         }
         break;

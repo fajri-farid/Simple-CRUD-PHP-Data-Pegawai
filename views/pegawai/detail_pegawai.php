@@ -9,7 +9,7 @@
     <body>
         <div class="container">
             <h3><?= $pegawai['nama']?></h3>
-            <a href="index.php">Kembali</a>
+            <a href="/DATA_PEGAWAI_APP/public">Kembali</a>
             <br><br>
 
             <label>Jenis Kelamin :</label>

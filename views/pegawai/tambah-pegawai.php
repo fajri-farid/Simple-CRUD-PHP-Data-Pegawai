@@ -10,7 +10,7 @@
         <div class="container">
             <h1>Tambah Data Pegawai</h1>
 
-           <form method="POST" action="index.php?page=proses-insert-pegawai">
+           <form method="POST" action="proses-insert-pegawai">
                 <label>Nama</label><br>
                 <input type="text" name="nama" required>
                 <br><br>
@@ -47,7 +47,7 @@
 
                 <button type="submit">Simpan</button>
             </form>
-            <a href="index.php">kembali</a>
+            <a href="/DATA_PEGAWAI_APP/public">kembali</a>
         </div>
     </body>
 </body>

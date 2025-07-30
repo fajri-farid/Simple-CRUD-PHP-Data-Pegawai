@@ -9,7 +9,7 @@
         <div class="container">
             <h1>Edit Data Pegawai</h1>
 
-            <form method="POST" action="index.php?page=proses-update-pegawai">
+            <form method="POST" action="proses-update-pegawai">
                 <input type="hidden" name="id" value="<?= $pegawai['id']; ?>">
 
                 <label>Nama</label><br>
@@ -48,7 +48,7 @@
 
                 <button type="submit">Ubah</button>
             </form>
-            <a href="index.php">kembali</a>
+            <a href="/DATA_PEGAWAI_APP/public">kembali</a>
         </div>
     </body>
 </html>

@@ -16,7 +16,7 @@
                 <button type="submit">Cari</button>
             </form>
 
-            <br><a href="index.php?page=tambah-pegawai">Tambah Data</a><br><br>
+            <br><a href="tambah-pegawai">Tambah Data</a><br><br>
 
             <table border="1">
                 <thead>
@@ -33,15 +33,15 @@
                         <tr>
                             <td><?= $index + 1; ?></td>
                             <td>
-                                <a href="index.php?page=detail-pegawai&id=<?= htmlspecialchars($pegawai['id']) ?>">
+                                <a href="detail-pegawai&id=<?= htmlspecialchars($pegawai['id']) ?>">
                                     <?= htmlspecialchars($pegawai['nama']) ?>
                                 </a>
                             </td>
                             <td><?= $pegawai['jenis_kelamin']; ?></td>
                             <td><?= $pegawai['alamat']; ?></td>
                             <td>
-                                <a href="index.php?page=edit-pegawai&id=<?= $pegawai['id'];?>">Edit</a> |
-                                <a href="index.php?page=proses-delete-pegawai&id=<?= $pegawai['id']; ?>">Hapus</a>
+                                <a href="edit-pegawai&id=<?= $pegawai['id'];?>">Edit</a> |
+                                <a href="proses-delete-pegawai&id=<?= $pegawai['id']; ?>">Hapus</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

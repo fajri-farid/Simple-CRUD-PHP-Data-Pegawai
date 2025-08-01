@@ -3,52 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/tambah-pegawai.css">
     <title>Tambah Data Pegawai</title>
 </head>
 <body>
-    <body>
-        <div class="container">
-            <h1>Tambah Data Pegawai</h1>
+    <div class="container">
+        <a href="/DATA_PEGAWAI_APP/public" class="btn-back">← Kembali</a>        
+        <h1 id="heading">Tambah Data Pegawai</h1>
 
-           <form method="POST" action="proses-insert-pegawai">
-                <label>Nama</label><br>
+        <form method="POST" action="proses-insert-pegawai" class="form-pegawai">
+            <div>
+                <label>Nama</label>
                 <input type="text" name="nama" required>
-                <br><br>
+            </div>
 
-                <label>Jenis Kelamin</label><br>
+            <div>
+                <label>Jenis Kelamin</label>
                 <select name="jenis_kelamin" required>
                     <option value="Laki-laki">Laki-laki</option>
                     <option value="Perempuan">Perempuan</option>
                 </select>
-                <br><br>
+            </div>
 
-                <label>Alamat</label><br>
+            <div>
+                <label>Alamat</label>
                 <textarea name="alamat" required></textarea>
-                <br><br>
+            </div>
 
-                <label>Tempat Lahir</label><br>
+            <div>
+                <label>Tempat Lahir</label>
                 <input type="text" name="tempat_lahir" required>
-                <br><br>
+            </div>
 
-                <label>Tanggal Lahir</label><br>
+            <div>
+                <label>Tanggal Lahir</label>
                 <input type="date" name="tanggal_lahir" required>
-                <br><br>
+            </div>
 
-                <label>Nomor Seluler</label><br>
+            <div>
+                <label>Nomor Seluler</label>
                 <input type="text" name="nomor_seluler" required>
-                <br><br>
+            </div>
 
-                <label>Status Perkawinan</label><br>
+            <div>
+                <label>Status Perkawinan</label>
                 <select name="status_perkawinan" required>
                     <option value="Belum Menikah">Belum Menikah</option>
                     <option value="Sudah">Sudah Menikah</option>
                 </select>
-                <br><br>
+            </div>
 
-                <button type="submit">Simpan</button>
-            </form>
-            <a href="/DATA_PEGAWAI_APP/public">kembali</a>
-        </div>
-    </body>
+            <button type="submit">Simpan</button>
+        </form>
+    </div>
 </body>
 </html>
